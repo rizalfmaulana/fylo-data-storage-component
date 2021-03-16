@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
   
   <title>Frontend Mentor | Fylo data storage component</title>
 
@@ -18,10 +19,12 @@
   <main>
     <div class="container">
       <div class="left">
-        <div class="title"></div>
-        <img src="./images/icon-document.svg" alt="file">
-        <img src="./images/icon-folder.svg" alt="folter">
-        <img src="./images/icon-upload.svg" alt="upload">
+        <div class="title">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <img class='doc' src="./images/icon-document.svg" alt="file">
+        <img class='fol' src="./images/icon-folder.svg" alt="folter">
+        <img class='up' src="./images/icon-upload.svg" alt="upload">
       </div>
       <div class="right">
         <p>You’ve used <span>815 GB</span>  of your storage</p>
@@ -36,6 +39,7 @@
         </div>
         <div class="pop">
           <span>185</span>GB Left
+          <div class="arrow-right"></div>
         </div>
       </div>
     </div>
