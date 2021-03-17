@@ -16,11 +16,24 @@
 body{
     height: 100vh;
     font-family: 'Raleway', sans-serif;
-    background-image: url("./images/bg-desktop.png");
-    background-repeat: no-repeat;
+    /* background-image: url("./images/bg-desktop.png"); */
+    /* background-repeat: no-repeat; */
     background-color: var(--VeryDarkBlue);
-    background-position: 0 320px;
-    background-size: 100%;
+    /* background-position: 0 320px; */
+    /* background-size: 100%; */
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50%;
+    background-image: url("./images/bg-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 main{
@@ -42,7 +55,7 @@ main{
     margin-right: 20px;
     width: 300px;
     border-radius: 10px 100px 10px 10px;
-    /* transform: translateY(50px); */
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
 }
 
 .title{
@@ -80,6 +93,7 @@ main{
     background-color: var(--DarkBlue);
     position: relative;
     height: 130px;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
 }
 
 p{
@@ -155,4 +169,107 @@ p span{
   position: absolute;
   bottom: -15px;
   right: 0;
+}
+
+@media (max-width: 600px){
+    body{
+        height: 100%;
+    }
+    body::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        background-image: url("./images/bg-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+  }
+
+    main{
+        height: 100%;
+        margin: 200px auto;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .left{
+        padding: 20px;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .right{
+        padding: 30px;
+        transform: translateY(0);
+        width: 100%;
+        position: relative;
+        height: 130px;
+    }
+    
+    .circle{
+        transform: translate(110px, 2px);
+    }
+
+    .arrow-right{
+        display: none;
+    }
+
+    .pop{
+        position: absolute;
+        padding: 15px;
+        font-weight: 400;
+        font-size: 10px;
+        width: 130px;
+        top: 110px;
+        right: 100px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        height: 100%;
+    }
+    body::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        background-image: url("./images/bg-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+     }
+
+     main{
+        height: 100%;
+        margin: 250px auto;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .left{
+        padding: 20px;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .right{
+        padding: 30px;
+        transform: translateY(0);
+        width: 100%;
+        position: relative;
+        height: 130px;
+    }
+    
 }
