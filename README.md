@@ -2,6 +2,9 @@
 
 ![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)
 
+## Live Site
+Click here to [Live Site](https://fylo-data-storage-component-six-kappa.vercel.app/)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
